@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>FSA presentation template</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="datastory-theme.css" type="text/css" />
+    <link rel="stylesheet" href="datastory-fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+class:center,middle, inverse
+background-image: url("fsa-title-image.jpg")
+background-size: cover
+
+### A gentle intro to GitHub
+
+&lt;div class="bottomright"&gt;16/12/2019&lt;br&gt;Helen Graham&lt;/div&gt;
+
+---
+
+### Why GitHub?
+
+&lt;img src="final.gif" width="50%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+### Why GitHub?
+
+Version control! 
+
+* One document with multiple versions inside it
+
+* Roll back to a previous version if you need to
+
+* Each version has a commit message that (should!) explain what has changed
+
+
+&lt;div class="bottom-right-logo"&gt;&lt;/div&gt;
+---
+
+### Why GitHub?
+
+Collaboration!
+
+* ...even if it's just with your future self
+
+* Gives you a shared workspace that keeps track of who has made what changes and when
+
+* Multiple branches enable safe development and (sort of) simultaneous working
+
+&lt;div class="bottom-right-logo"&gt;&lt;/div&gt;
+---
+
+### What is Git? What is GitHub?
+
+.pull-left[
+*Git* is version control software
+
+* install on your computer 
+* allows you to create a local repo(sitory) that you commit your files to
+* keeps track of changes, allows you to roll back
+* can push local repositories to remote ones to allow collaboration
+]
+
+.pull-right[
+*GitHub* hosts Git repos online
+* a backup if nothing else
+* others can see/contribute
+* log and resolve issues
+* organise your project
+]
+ 
+---
+
+### Using GitHub without installing Git
+
+* A way to browse a project's files
+
+* Drag and drop to add - it makes a commit
+
+* You can edit *some* files
+
+* You can go back in time and see/download work from a previous version of the repo
+
+---
+
+### Why bother installing Git?
+
+* It tells you what has changed
+
+* Easy workflow (eventually!) - diff, add, commit, push
+
+* Allows your machine to talk directly to GitHub
+
+---
+
+### The Git/GitHub workflow
+
+![git-diagram](git-diagram.gif)
+
+---
+
+### The Git/GitHub workflow
+
+* create/edit files in local working directory
+
+* **add** files to the *staging area* 
+
+* **commit** these staged files to your local *Git repository*
+
+* **push** what you just committed to your *remote* repository on GitHub
+
+---
+
+### Setup
+
+1) Get a GitHub account
+
+2) Install Git for Windows
+
+3) Introduce yourself (with the same email address as your GitHub account)
+
+In Git Bash (should have installed with Git for Windows):
+
+
+```bash
+git config --global user.name 'Jane Doe'
+git config --global user.email 'jane@example.com'
+```
+
+you can check that's worked with
+
+
+```bash
+git config --global --list
+```
+
+(output should show your user name and email)
+
+---
+
+### New project with GitHub from the start
+
+Really straightforward with RStudio:
+
+1) Create a repo on GitHub, copy the URL
+
+2) In RStudio: new project &gt; version control &gt; paste in the URL from GitHub
+
+3) All set up! The Git box in the top right hand corner lets you stage, commit and push
+
+This is probably the simplest way to add an existing project to GitHub as well
+
+---
+
+### Using the command line to put a project on GitHub
+
+1) Open Git bash 
+
+2) Navigate to your project folder
+
+3) Turn the folder into a git repository: 
+
+
+```bash
+git init
+```
+
+4) Add and commit your files:
+
+
+```bash
+git add .
+git commit -m "first commit"
+```
+
+Now you have a local repo...
+
+---
+
+### Use the command line???
+
+5) Create a blank GitHub repo, copy the URL
+
+6) Connect your local and remote repos:
+
+
+```bash
+git remote add origin https://github.com/helen-food/test-project.git
+```
+
+7) Push from local to remote
+
+
+```bash
+git push -u origin master
+```
+
+---
+class:center,middle
+
+### That's Git in a nutshell
+
+![baby-yoda](baby-yoda.gif) 
+
+---
+
+### Great resources
+
+GitHub's own [Learning Lab]("https://lab.github.com/") has online training courses 
+starting from the very basics
+
+Jenny Bryan's [Happy Git and GitHub for the useR]("https://happygitwithr.com/") takes you 
+through getting R/RStudio to talk to Git/GitHub step by step
+
+Karl Broman's minimal primer 
+[git/github guide: a minimal tutorial]("https://kbroman.org/github_tutorial/) covers 
+all the main functionality although it is all command line based
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

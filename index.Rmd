@@ -1,0 +1,220 @@
+---
+title: "FSA presentation template"
+output:
+  xaringan::moon_reader:
+    css: ["datastory-theme.css","datastory-fonts.css"]
+    seal: false
+    nature:
+      highlightStyle: github
+      highlightLines: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+class:center,middle, inverse
+background-image: url("fsa-title-image.jpg")
+background-size: cover
+
+### A gentle intro to GitHub
+
+<div class="bottomright">16/12/2019<br>Helen Graham</div>
+
+---
+
+### Why GitHub?
+
+```{r out.width='50%', fig.align='center'}
+knitr::include_graphics("final.gif")
+```
+
+
+---
+
+### Why GitHub?
+
+Version control! 
+
+* One document with multiple versions inside it
+
+* Roll back to a previous version if you need to
+
+* Each version has a commit message that (should!) explain what has changed
+
+
+<div class="bottom-right-logo"></div>
+---
+
+### Why GitHub?
+
+Collaboration!
+
+* ...even if it's just with your future self
+
+* Gives you a shared workspace that keeps track of who has made what changes and when
+
+* Multiple branches enable safe development and (sort of) simultaneous working
+
+<div class="bottom-right-logo"></div>
+---
+
+### What is Git? What is GitHub?
+
+.pull-left[
+*Git* is version control software
+
+* install on your computer 
+* allows you to create a local repo(sitory) that you commit your files to
+* keeps track of changes, allows you to roll back
+* can push local repositories to remote ones to allow collaboration
+]
+
+.pull-right[
+*GitHub* hosts Git repos online
+* a backup if nothing else
+* others can see/contribute
+* log and resolve issues
+* organise your project
+]
+ 
+---
+
+### Using GitHub without installing Git
+
+* A way to browse a project's files
+
+* Drag and drop to add - it makes a commit
+
+* You can edit *some* files
+
+* You can go back in time and see/download work from a previous version of the repo
+
+---
+
+### Why bother installing Git?
+
+* It tells you what has changed
+
+* Easy workflow (eventually!) - diff, add, commit, push
+
+* Allows your machine to talk directly to GitHub
+
+---
+
+### The Git/GitHub workflow
+
+![git-diagram](git-diagram.gif)
+
+---
+
+### The Git/GitHub workflow
+
+* create/edit files in local working directory
+
+* **add** files to the *staging area* 
+
+* **commit** these staged files to your local *Git repository*
+
+* **push** what you just committed to your *remote* repository on GitHub
+
+---
+
+### Setup
+
+1) Get a GitHub account
+
+2) Install Git for Windows
+
+3) Introduce yourself (with the same email address as your GitHub account)
+
+In Git Bash (should have installed with Git for Windows):
+
+```{r engine = 'bash', eval = FALSE, echo=TRUE}
+git config --global user.name 'Jane Doe'
+git config --global user.email 'jane@example.com'
+```
+
+you can check that's worked with
+
+```{r, engine = 'bash', eval = FALSE, echo=TRUE}
+git config --global --list
+```
+
+(output should show your user name and email)
+
+---
+
+### New project with GitHub from the start
+
+Really straightforward with RStudio:
+
+1) Create a repo on GitHub, copy the URL
+
+2) In RStudio: new project > version control > paste in the URL from GitHub
+
+3) All set up! The Git box in the top right hand corner lets you stage, commit and push
+
+This is probably the simplest way to add an existing project to GitHub as well
+
+---
+
+### Using the command line to put a project on GitHub
+
+1) Open Git bash 
+
+2) Navigate to your project folder
+
+3) Turn the folder into a git repository: 
+
+```{r, engine = 'bash', eval = FALSE, echo=TRUE}
+git init
+```
+
+4) Add and commit your files:
+
+```{r, engine = 'bash', eval = FALSE, echo=TRUE}
+git add .
+git commit -m "first commit"
+```
+
+Now you have a local repo...
+
+---
+
+### Use the command line???
+
+5) Create a blank GitHub repo, copy the URL
+
+6) Connect your local and remote repos:
+
+```{r, engine = 'bash', eval = FALSE, echo=TRUE}
+git remote add origin https://github.com/helen-food/test-project.git
+```
+
+7) Push from local to remote
+
+```{r, engine = 'bash', eval = FALSE, echo=TRUE}
+git push -u origin master
+```
+
+---
+class:center,middle
+
+### That's Git in a nutshell
+
+![baby-yoda](baby-yoda.gif) 
+
+---
+
+### Great resources
+
+GitHub's own [Learning Lab]("https://lab.github.com/") has online training courses 
+starting from the very basics
+
+Jenny Bryan's [Happy Git and GitHub for the useR]("https://happygitwithr.com/") takes you 
+through getting R/RStudio to talk to Git/GitHub step by step
+
+Karl Broman's minimal primer 
+[git/github guide: a minimal tutorial]("https://kbroman.org/github_tutorial/) covers 
+all the main functionality although it is all command line based
