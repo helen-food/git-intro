@@ -1,5 +1,5 @@
 ---
-title: "FSA presentation template"
+title: "A gentle intro to GitHub"
 output:
   xaringan::moon_reader:
     css: ["style/datastory-theme.css","style/datastory-fonts.css"]
