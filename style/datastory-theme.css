@@ -113,7 +113,7 @@ th, td { padding: 5px; }
     width: 120px;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url("fsalogo-vsmall.png");
+    background-image: url("../img/fsalogo-vsmall.png");
 }
 
 @page { margin: 0; }

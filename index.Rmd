@@ -2,7 +2,7 @@
 title: "FSA presentation template"
 output:
   xaringan::moon_reader:
-    css: ["datastory-theme.css","datastory-fonts.css"]
+    css: ["style/datastory-theme.css","style/datastory-fonts.css"]
     seal: false
     nature:
       highlightStyle: github
@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 ```
 
 class:center,middle, inverse
-background-image: url("fsa-title-image.jpg")
+background-image: url("img/fsa-title-image.jpg")
 background-size: cover
 
 ### A gentle intro to GitHub
@@ -26,7 +26,7 @@ background-size: cover
 ### Why GitHub?
 
 ```{r out.width='50%', fig.align='center'}
-knitr::include_graphics("final.gif")
+knitr::include_graphics("img/final.gif")
 ```
 
 
@@ -77,7 +77,9 @@ Collaboration!
 * log and resolve issues
 * organise your project
 ]
- 
+
+<div class="bottom-right-logo"></div>
+
 ---
 
 ### Using GitHub without installing Git
@@ -90,6 +92,8 @@ Collaboration!
 
 * You can go back in time and see/download work from a previous version of the repo
 
+<div class="bottom-right-logo"></div>
+
 ---
 
 ### Why bother installing Git?
@@ -100,11 +104,13 @@ Collaboration!
 
 * Allows your machine to talk directly to GitHub
 
+<div class="bottom-right-logo"></div>
+
 ---
 
 ### The Git/GitHub workflow
 
-![git-diagram](git-diagram.gif)
+![git-diagram](img/git-diagram.gif)
 
 ---
 
@@ -117,6 +123,9 @@ Collaboration!
 * **commit** these staged files to your local *Git repository*
 
 * **push** what you just committed to your *remote* repository on GitHub
+
+
+<div class="bottom-right-logo"></div>
 
 ---
 
@@ -203,7 +212,7 @@ class:center,middle
 
 ### That's Git in a nutshell
 
-![baby-yoda](baby-yoda.gif) 
+![baby-yoda](img/baby-yoda.gif) 
 
 ---
 
