@@ -218,12 +218,11 @@ class:center,middle
 
 ### Great resources
 
-GitHub's own [Learning Lab](https://lab.github.com/) has online training courses 
-starting from the very basics
+GitHub's own Learning Lab has online training courses 
+starting from the very basics (https://lab.github.com/)
 
-Jenny Bryan's [Happy Git and GitHub for the useR](https://happygitwithr.com/) takes you 
-through getting R/RStudio to talk to Git/GitHub step by step
+Jenny Bryan's *Happy Git and GitHub for the useR* takes you 
+through getting R/RStudio to talk to Git/GitHub step by step (https://happygitwithr.com/)
 
 Karl Broman's minimal primer 
-[git/github guide: a minimal tutorial](https://kbroman.org/github_tutorial/) covers 
-all the main functionality although it is all command line based
+covers all the main functionality although it is all command line based (https://kbroman.org/github_tutorial/) 
